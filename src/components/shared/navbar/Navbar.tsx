@@ -2,7 +2,6 @@ import React from "react";
 
 /** Vendor **/
 import {
-  Avatar,
   Box,
   Button,
   ButtonGroup,
@@ -14,7 +13,6 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
 
 /** Custom Components **/
 import LoginButton from "../../auth/cards/LoginButton";
@@ -31,7 +29,7 @@ type INavSet = { path: string; title: string };
 
 type INavigationSet = Array<INavSet>;
 
-type IProfileSet = Array<INavSet>;
+// type IProfileSet = Array<INavSet>;
 
 const navigationSet: INavigationSet = [
   { title: "Features", path: "/features" },
@@ -41,8 +39,6 @@ const navigationSet: INavigationSet = [
 ];
 
 function NavbarDesktop(): React.ReactElement {
-  const { user } = useAuth0();
-
   return (
     <Box className="navbar">
       <Container className="navbar-content-container">
@@ -77,7 +73,7 @@ function NavbarDesktop(): React.ReactElement {
           </Box>
           <Box className="flex-center flex-row gap-spacer-5">
             <LoginButton />
-            {!user && <RegisterButton />}
+            <RegisterButton />
           </Box>
         </Box>
       </Container>

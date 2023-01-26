@@ -1,8 +1,8 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 
 /** Vendor **/
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ChakraProvider, extendTheme, Text } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Provider as ContraProvider } from "@contra-ui/core";
 import { theme } from "@chakra-ui/pro-theme";
 
