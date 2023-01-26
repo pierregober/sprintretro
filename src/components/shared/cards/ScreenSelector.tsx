@@ -1,16 +1,15 @@
 import React from "react";
 
+/** Vendor **/
+import { useBreakpointValue } from "@chakra-ui/react";
+
 function ScreenSelector({
   children,
 }: {
   children: React.ReactNode;
 }): React.ReactElement {
   const options = React.Children.toArray(children);
-
-  return (
-    <React.Fragment>
-      {window.innerWidth > 992 ? options[0] : options[1]}
-    </React.Fragment>
-  );
+  const isDesktop = useBreakpointValue({ base: false, lg: true });
+  return <React.Fragment>{isDesktop ? options[0] : options[1]}</React.Fragment>;
 }
 export default ScreenSelector;

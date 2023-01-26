@@ -18,6 +18,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 /** Custom Components **/
 import LoginButton from "../../auth/cards/LoginButton";
+import RegisterButton from "../../auth/cards/RegisterButton";
 import Logo from "../../../dist/img/Logo";
 import ScreenSelector from "../cards/ScreenSelector";
 import Sidebar from "../sidebar/Sidebar";
@@ -35,7 +36,7 @@ type IProfileSet = Array<INavSet>;
 const navigationSet: INavigationSet = [
   { title: "Features", path: "/features" },
   { title: "Pricing", path: "/pricing" },
-  { title: "Housing", path: "/about" },
+  { title: "About", path: "/about" },
   { title: "FAQs", path: "/faqs" },
 ];
 
@@ -54,7 +55,8 @@ function NavbarDesktop(): React.ReactElement {
               {navigationSet.map((nav: INavSet, index: number) => {
                 return (
                   <Button
-                    className="font-weight-semibold"
+                    fontWeight="bold"
+                    fontSize="1.375rem"
                     key={nav.title}
                     aria-current={
                       window.location.pathname === nav.path ? "page" : false
@@ -75,6 +77,7 @@ function NavbarDesktop(): React.ReactElement {
           </Box>
           <Box className="flex-center flex-row gap-spacer-5">
             <LoginButton />
+            {!user && <RegisterButton />}
           </Box>
         </Box>
       </Container>

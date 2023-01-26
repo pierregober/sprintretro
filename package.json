@@ -6,9 +6,11 @@
     "@auth0/auth0-react": "^1.12.0",
     "@chakra-ui/pro-theme": "^0.0.57",
     "@chakra-ui/react": "^2.4.5",
+    "@contra-ui/core": "^0.0.8",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@reduxjs/toolkit": "^1.9.1",
+    "@styled-system/should-forward-prop": "^5.1.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -20,9 +22,12 @@
     "framer-motion": "^8.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.6",
+    "styled-system": "^5.1.5",
     "typescript": "^4.9.4",
     "web-vitals": "^2.1.4"
   },
@@ -30,12 +35,24 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -51,6 +68,22 @@
     ]
   },
   "devDependencies": {
-    "@chakra-ui/cli": "^2.3.0"
+    "@chakra-ui/cli": "^2.3.0",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
+    "@storybook/node-logger": "^6.5.15",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/styled-components": "^5.1.26",
+    "@types/styled-system": "^5.1.16",
+    "@types/styled-system__should-forward-prop": "^5.1.2",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "prop-types": "^15.8.1",
+    "webpack": "^5.75.0"
   }
 }

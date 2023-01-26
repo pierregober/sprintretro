@@ -3,6 +3,7 @@ import React, { lazy, Suspense } from "react";
 /** Vendor **/
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ChakraProvider, extendTheme, Text } from "@chakra-ui/react";
+import { Provider as ContraProvider } from "@contra-ui/core";
 import { theme } from "@chakra-ui/pro-theme";
 
 /** Custom Components **/
@@ -49,20 +50,22 @@ function App(): ReactElement {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <ChakraProvider theme={myTheme}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<AppLayout />}>
-              <Route path="" element={<Home />} />
-              <Route path="about" element={<About />} />
-              <Route path="checkout" element={<Checkout />} />
-              <Route path="faq" element={<FAQ />} />
-              <Route path="features" element={<Features />} />
-              <Route path="pricing" element={<Pricing />} />
-              <Route path="legal" element={<Legal />} />
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
+        <ContraProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<AppLayout />}>
+                <Route path="" element={<Home />} />
+                <Route path="about" element={<About />} />
+                <Route path="checkout" element={<Checkout />} />
+                <Route path="faq" element={<FAQ />} />
+                <Route path="features" element={<Features />} />
+                <Route path="pricing" element={<Pricing />} />
+                <Route path="legal" element={<Legal />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </ContraProvider>
       </ChakraProvider>
     </Suspense>
   );

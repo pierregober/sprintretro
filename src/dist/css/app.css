@@ -6,7 +6,8 @@ body {
   width: 10px;
   height: 7px;
   margin-right: 10px;
-  background-color: transparent;
+  background-color: white;
+  opacity: 0.8;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
@@ -19,7 +20,7 @@ body {
   background-color: #545a64;
 }
 ::-webkit-scrollbar-corner {
-  background-color: transparent;
+  background-color: inherit;
 }
 
 /* AvatarGroup remove excess */

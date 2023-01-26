@@ -1,0 +1,9 @@
+.features-container:hover .feature {
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.features-container:hover .feature:hover {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}

@@ -29,6 +29,7 @@
       "react-router-dom"
     ]
   },
+  "noImplicitAny": false,
   "include": ["./src/"],
   "exclude": ["**/*.spec.js"]
 }

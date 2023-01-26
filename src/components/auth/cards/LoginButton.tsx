@@ -1,4 +1,5 @@
-import { Box, Button, Skeleton } from "@chakra-ui/react";
+import { Box, Skeleton } from "@chakra-ui/react";
+import { Button } from "@contra-ui/core";
 
 /** Authenication **/
 import { useAuth0 } from "@auth0/auth0-react";
@@ -19,11 +20,11 @@ function LoginButton(): JSX.Element {
 
   return (
     <Box>
-      <Skeleton isLoaded={!isLoading}>
-        <Button variant="outline" onClick={() => authEventHandler()}>
-          {isAuthenticated ? "Log Out" : "Login"}
-        </Button>
-      </Skeleton>
+      {/* <Skeleton isLoaded={!isLoading}> */}
+      <Button appearance="teritary" onClick={() => authEventHandler()}>
+        {isAuthenticated ? "Log Out" : "Login"}
+      </Button>
+      {/* </Skeleton> */}
     </Box>
   );
 }
