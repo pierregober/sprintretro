@@ -7,7 +7,11 @@ import "./features.css";
 
 function Features() {
   return (
-    <Box as="section" bg="bg-surface">
+    <Box
+      as="section"
+      bg="bg-surface"
+      style={{ boxShadow: "0px -2px 12px rgb(206 206 206 / 75%)" }}
+    >
       <Container py={{ base: "8", md: "12" }}>
         <Stack spacing={{ base: "12", md: "16" }}>
           <Text
