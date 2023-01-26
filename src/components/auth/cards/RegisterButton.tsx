@@ -2,7 +2,7 @@
 import { Button } from "@contra-ui/core";
 
 /** Authenication **/
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 
 function LoginButton(): JSX.Element {
   // const { isAuthenticated, logout, isLoading } = useAuth0();

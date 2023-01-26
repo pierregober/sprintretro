@@ -1,6 +1,6 @@
 /** Vendor **/
-import { Box, Container } from "@chakra-ui/react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Box } from "@chakra-ui/react";
+import { Outlet } from "react-router-dom";
 
 /** Custom Components **/
 import Navbar from "../navbar/Navbar";

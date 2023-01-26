@@ -1,15 +1,4 @@
-import * as React from "react";
-
-import {
-  Box,
-  Container,
-  Heading,
-  SimpleGrid,
-  Square,
-  Stack,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Box, Container, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { IconButton } from "@contra-ui/core";
 
 import { features } from "./data/features";

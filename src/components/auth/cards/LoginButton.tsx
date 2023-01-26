@@ -1,11 +1,11 @@
-import { Box, Skeleton } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { Button } from "@contra-ui/core";
 
 /** Authenication **/
 import { useAuth0 } from "@auth0/auth0-react";
 
 function LoginButton(): JSX.Element {
-  const { isAuthenticated, logout, isLoading } = useAuth0();
+  const { isAuthenticated, logout } = useAuth0();
 
   const logoutWithRedirect = () =>
     logout({

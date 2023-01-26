@@ -1,11 +1,5 @@
 /** Vendor **/
-import {
-  Box,
-  Container,
-  Link,
-  Flex,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Box, Link, useBreakpointValue } from "@chakra-ui/react";
 import { Button, Title } from "@contra-ui/core";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -18,10 +12,6 @@ import BetaRegister from "../cards/BetaRegister";
 /** Images **/
 import PersonLeft from "../../../dist/img/PersonLeft";
 import PersonRight from "../../../dist/img/PersonRight";
-import PersonMobileLeftTop from "../../../dist/img/PersonMobileLeftTop";
-import PersonMobileRightTop from "../../../dist/img/PersonMobileRightTop";
-import PersonMobileLeftBottom from "../../../dist/img/PersonMobileLeftBottom";
-import PersonMobileRightBottom from "../../../dist/img/PersonMobileRightBottom";
 
 function Home() {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
