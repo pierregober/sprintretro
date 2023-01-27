@@ -21,7 +21,6 @@ function Home() {
   return (
     <>
       <Box
-        bg={isDesktop ? "inherit" : "#1947E5"}
         maxH="80vh"
         style={{
           height: isDesktop ? "569px" : "500px",
