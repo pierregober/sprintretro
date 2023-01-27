@@ -1,5 +1,5 @@
 /** Vendor **/
-import { Box, Link, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Link, Text, useBreakpointValue } from "@chakra-ui/react";
 import { Button, Title } from "@contra-ui/core";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -8,6 +8,7 @@ import RegisterButton from "../../auth/cards/RegisterButton";
 import Features from "../cards/Features";
 import CompanyGallery from "../cards/CompanyGallery";
 import BetaRegister from "../cards/BetaRegister";
+import HowSection from "../cards/HowSection";
 
 /** Images **/
 import PersonLeft from "../../../dist/img/PersonLeft";
@@ -62,11 +63,27 @@ function Home() {
           <RegisterButton />
         </Box>
       </Box>
+      <Box
+        as="section"
+        bg="bg-surface"
+        style={{
+          zIndex: "10",
+          position: "relative",
+          boxShadow: "-1px -33px 41px -12px rgba(137,137,137,0.37)",
+        }}
+      >
+        <HowSection />
+        <Box className="flex flex-column-center flex-center" py={1}>
+          <Link className="link-no-decoration" as={RouterLink} to={"/features"}>
+            <Button>Go To Articles</Button>
+          </Link>
+        </Box>
+      </Box>
       <Box bg="bg-surface" style={{ zIndex: "10", position: "relative" }}>
         <Features />
         <Box className="flex flex-column-center flex-center" py={12}>
           <Link className="link-no-decoration" as={RouterLink} to={"/features"}>
-            <Button>More Features</Button>
+            <Button>View All Features</Button>
           </Link>
         </Box>
       </Box>
