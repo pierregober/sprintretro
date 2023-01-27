@@ -10,7 +10,7 @@ function Features() {
     <Box
       as="section"
       bg="bg-surface"
-      style={{ boxShadow: "0px -2px 12px rgb(206 206 206 / 75%)" }}
+      style={{ boxShadow: "-1px -33px 41px -12px rgba(137,137,137,0.37)" }}
     >
       <Container py={{ base: "8", md: "12" }}>
         <Stack spacing={{ base: "12", md: "16" }}>

@@ -13,6 +13,9 @@ import BetaRegister from "../cards/BetaRegister";
 import PersonLeft from "../../../dist/img/PersonLeft";
 import PersonRight from "../../../dist/img/PersonRight";
 
+/** CSS **/
+import "./home.css";
+
 function Home() {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   return (
@@ -25,6 +28,7 @@ function Home() {
           display: "flex",
           justifyContent: "center",
         }}
+        className={isDesktop ? "" : "mobile-hero-gradient"}
       >
         {isDesktop && (
           <Box
