@@ -1,5 +1,5 @@
 /** Vendor **/
-import { Box, Link, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Link, useBreakpointValue } from "@chakra-ui/react";
 import { Button, Title } from "@contra-ui/core";
 import { Link as RouterLink } from "react-router-dom";
 
