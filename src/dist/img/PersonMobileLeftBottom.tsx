@@ -7,7 +7,7 @@ function PersonMobileLeftBottom() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1389_9070)">
+      <g clipPath="url(#clip0_1389_9070)">
         <rect width="95" height="95" rx="47.5" fill="#FFBD12" />
         <path
           fill-rule="evenodd"

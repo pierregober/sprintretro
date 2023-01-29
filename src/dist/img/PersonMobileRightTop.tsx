@@ -7,7 +7,7 @@ function PersonMobileRightTop() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1389_9071)">
+      <g clipPath="url(#clip0_1389_9071)">
         <rect
           width="95"
           height="95"

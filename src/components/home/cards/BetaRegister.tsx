@@ -108,8 +108,6 @@ function BetaRegister() {
                     : "flex-column"
                 }
                 data-netlify={true}
-                //@ts-ignore
-                netlify
                 name="preregister"
                 onSubmit={handleSubmit(onSubmit)}
               >
