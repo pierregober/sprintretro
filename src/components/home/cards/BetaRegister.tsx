@@ -42,6 +42,14 @@ function BetaRegister() {
     formState: { errors },
   } = useForm<Inputs>({ resolver: yupResolver(schema) });
 
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]),
+      )
+      .join("&");
+  };
+
   const actions = {
     register: () => {
       // axios({
@@ -67,7 +75,7 @@ function BetaRegister() {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({ email: watch("email") }).toString(),
+        body: encode({ email: watch("email") }).toString(),
       })
         .then(() => alert("Success!"))
         .catch((error) => alert(error));
@@ -119,11 +127,14 @@ function BetaRegister() {
                     : "flex-column"
                 }
                 data-netlify={true}
+                //@ts-ignore
+                netlify
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <input
                   placeholder="Enter your email"
                   {...register("email")}
+                  name="email"
                   style={{
                     border: "2px solid black",
                     borderRadius: "16px",
