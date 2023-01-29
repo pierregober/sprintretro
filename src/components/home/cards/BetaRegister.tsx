@@ -18,6 +18,9 @@ import { Button } from "@contra-ui/core";
 /** Types **/
 import type { SubmitHandler } from "react-hook-form";
 
+axios.defaults.headers.post["Content-Type"] =
+  "application/x-www-form-urlencoded";
+
 type Inputs = {
   email: string;
 };
@@ -41,27 +44,33 @@ function BetaRegister() {
 
   const actions = {
     register: () => {
-      axios({
-        url: "/",
+      // axios({
+      //   url: "/",
+      //   method: "POST",
+      //   data: new URLSearchParams({ email: watch("email") }),
+      // })
+      //   .then(function (response) {
+      //     console.log(response);
+      //     toast({
+      //       title: "Congrats!",
+      //       description:
+      //         "You have been added to the beta list. We will contact you soon.",
+      //       // "We need a valid email to contact you, it will be worth it. Trust",
+      //       status: "success",
+      //       duration: 5000,
+      //       isClosable: true,
+      //     });
+      //   })
+      //   .catch(function (error) {
+      //     console.log(error);
+      //   });
+      fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        data: { email: watch("email") },
+        body: new URLSearchParams({ email: watch("email") }).toString(),
       })
-        .then(function (response) {
-          console.log(response);
-          toast({
-            title: "Congrats!",
-            description:
-              "You have been added to the beta list. We will contact you soon.",
-            // "We need a valid email to contact you, it will be worth it. Trust",
-            status: "success",
-            duration: 5000,
-            isClosable: true,
-          });
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+        .then(() => alert("Success!"))
+        .catch((error) => alert(error));
     },
   };
 
