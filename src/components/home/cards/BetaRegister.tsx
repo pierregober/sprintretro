@@ -58,7 +58,16 @@ function BetaRegister() {
           email: watch("email"),
         }).toString(),
       })
-        .then(() => alert("Success!"))
+        .then(() =>
+          toast({
+            title: "Congrats!",
+            description:
+              "You have been added to the beta list. We will contact you soon.",
+            status: "success",
+            duration: 5000,
+            isClosable: true,
+          }),
+        )
         .catch((error) => alert(error));
     },
   };
