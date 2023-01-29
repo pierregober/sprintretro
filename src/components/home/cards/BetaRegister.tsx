@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-
 /** Vendor **/
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
