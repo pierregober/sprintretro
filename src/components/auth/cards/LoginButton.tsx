@@ -21,7 +21,11 @@ function LoginButton(): JSX.Element {
   return (
     <Box>
       {/* <Skeleton isLoaded={!isLoading}> */}
-      <Button appearance="teritary" onClick={() => authEventHandler()}>
+      <Button
+        appearance="teritary"
+        className="tertiary-btn"
+        onClick={() => authEventHandler()}
+      >
         {isAuthenticated ? "Log Out" : "Login"}
       </Button>
       {/* </Skeleton> */}

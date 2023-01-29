@@ -143,6 +143,7 @@ function BetaRegister() {
                   hidden
                 />
                 <Button
+                  className="primary-btn"
                   type="submit"
                   appearance="primary"
                   size="small"

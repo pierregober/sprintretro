@@ -75,7 +75,7 @@ function Home() {
         <HowSection />
         <Box className="flex flex-column-center flex-center" py={1}>
           <Link className="link-no-decoration" as={RouterLink} to={"/features"}>
-            <Button>Go To Articles</Button>
+            <Button className="primary-btn">Go To Articles</Button>
           </Link>
         </Box>
       </Box>
@@ -83,7 +83,7 @@ function Home() {
         <Features />
         <Box className="flex flex-column-center flex-center" py={12}>
           <Link className="link-no-decoration" as={RouterLink} to={"/features"}>
-            <Button>View All Features</Button>
+            <Button className="primary-btn">View All Features</Button>
           </Link>
         </Box>
       </Box>

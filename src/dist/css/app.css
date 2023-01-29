@@ -41,3 +41,19 @@ body {
   height: calc(100vh - 70px);
   overflow-y: auto;
 }
+
+.tertiary-btn:hover {
+  background-color: #d6d6d6;
+}
+
+.secondary-btn {
+  color: black !important;
+}
+
+.secondary-btn:hover {
+  background-color: #ffd467 !important;
+}
+
+.primary-btn:hover {
+  background-color: #2d5cff;
+}

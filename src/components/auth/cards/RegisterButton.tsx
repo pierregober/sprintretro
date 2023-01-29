@@ -19,7 +19,7 @@ function LoginButton(): JSX.Element {
   // };
 
   return (
-    <Button style={{ backgroundColor: "#FFBD12" }} appearance="teritary">
+    <Button style={{ backgroundColor: "#FFBD12" }} className="secondary-btn">
       Get Started
     </Button>
   );
