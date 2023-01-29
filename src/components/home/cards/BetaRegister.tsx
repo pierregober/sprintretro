@@ -75,7 +75,10 @@ function BetaRegister() {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ email: watch("email") }).toString(),
+        body: encode({
+          "form-name": "preregister",
+          email: watch("email"),
+        }).toString(),
       })
         .then(() => alert("Success!"))
         .catch((error) => alert(error));
@@ -129,6 +132,7 @@ function BetaRegister() {
                 data-netlify={true}
                 //@ts-ignore
                 netlify
+                name="preregister"
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <input
