@@ -1,18 +1,86 @@
+import React, { useEffect } from "react";
+
+/** Vendor **/
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import axios from "axios";
+import * as yup from "yup";
 import {
   Box,
   Container,
-  FormControl,
-  FormHelperText,
   Heading,
   Stack,
   Text,
   useBreakpointValue,
   useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
-import { Button, Input } from "@contra-ui/core";
+import { Button } from "@contra-ui/core";
+
+/** Types **/
+import type { SubmitHandler } from "react-hook-form";
+
+type Inputs = {
+  email: string;
+};
 
 function BetaRegister() {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
+  const toast = useToast();
+
+  const schema = yup
+    .object({
+      email: yup.string().required(),
+    })
+    .required();
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>({ resolver: yupResolver(schema) });
+
+  const actions = {
+    register: () => {
+      axios({
+        url: "/",
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        data: { email: watch("email") },
+      })
+        .then(function (response) {
+          console.log(response);
+          toast({
+            title: "Congrats!",
+            description:
+              "You have been added to the beta list. We will contact you soon.",
+            // "We need a valid email to contact you, it will be worth it. Trust",
+            status: "success",
+            duration: 5000,
+            isClosable: true,
+          });
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+  };
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    if (!errors.email && data?.email.includes("@")) {
+      actions.register();
+    } else {
+      toast({
+        title: "Error",
+        description: "Please enter a valid email",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
+  };
+
   return (
     <Box bgGradient="linear(to-b, bg-canvas 50%, #FFBD12 50%, )">
       <Container pt={{ base: "16", md: "24" }} pb={{ base: "8", md: "24" }}>
@@ -36,30 +104,44 @@ function BetaRegister() {
                 Get Beta Access
               </Text>
             </Stack>
-            <Stack
-              direction={{ base: "column", md: "row" }}
-              width="full"
-              maxW={{ base: "md", xl: "lg" }}
-            >
-              <FormControl>
-                <Input placeholder="Enter your email" />
-                {isDesktop && (
-                  <FormHelperText color="subtle">
-                    We will notify you when it's ready
-                  </FormHelperText>
-                )}
-              </FormControl>
-              <Button
-                appearance="primary"
-                size="small"
-                style={{
-                  width: isDesktop ? "fit-content" : "100%",
-                  height: "53px",
-                }}
+            <Box width="full" maxW={{ base: "md", xl: "lg" }}>
+              <form
+                className={
+                  "flex gap-spacer-2 width-100 " + isDesktop
+                    ? ""
+                    : "flex-column"
+                }
+                data-netlify={true}
+                onSubmit={handleSubmit(onSubmit)}
               >
-                Subscribe
-              </Button>
-            </Stack>
+                <input
+                  placeholder="Enter your email"
+                  {...register("email")}
+                  style={{
+                    border: "2px solid black",
+                    borderRadius: "16px",
+                    boxShadow: "0 2px 0 #18191f",
+                    flex: 1,
+                    height: "51px",
+                    outline: "none",
+                    padding: "10px",
+                    width: "100%",
+                    marginBottom: "10px",
+                  }}
+                />
+                <Button
+                  type="submit"
+                  appearance="primary"
+                  size="small"
+                  style={{
+                    width: "100%",
+                    height: "53px",
+                  }}
+                >
+                  Subscribe
+                </Button>
+              </form>
+            </Box>
           </Stack>
         </Box>
       </Container>

@@ -63,8 +63,7 @@ function HowSection() {
           >
             By utilizing machine learning & natural language processing, teams
             that adopt agile project management can improve their retrospective
-            process. AI has the potential to have a significant impact on the
-            retrospective process with these four benefits.
+            process with these four key benefits.
           </Text>
         </Box>
         <Box maxW={{ base: "xl", md: "7xl" }} mx="auto" px="4">
