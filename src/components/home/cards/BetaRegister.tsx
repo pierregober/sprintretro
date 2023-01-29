@@ -18,10 +18,8 @@ import { Button } from "@contra-ui/core";
 /** Types **/
 import type { SubmitHandler } from "react-hook-form";
 
-axios.defaults.headers.post["Content-Type"] =
-  "application/x-www-form-urlencoded";
-
 type Inputs = {
+  address: string;
   email: string;
 };
 
@@ -52,26 +50,6 @@ function BetaRegister() {
 
   const actions = {
     register: () => {
-      // axios({
-      //   url: "/",
-      //   method: "POST",
-      //   data: new URLSearchParams({ email: watch("email") }),
-      // })
-      //   .then(function (response) {
-      //     console.log(response);
-      //     toast({
-      //       title: "Congrats!",
-      //       description:
-      //         "You have been added to the beta list. We will contact you soon.",
-      //       // "We need a valid email to contact you, it will be worth it. Trust",
-      //       status: "success",
-      //       duration: 5000,
-      //       isClosable: true,
-      //     });
-      //   })
-      //   .catch(function (error) {
-      //     console.log(error);
-      //   });
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -86,7 +64,7 @@ function BetaRegister() {
   };
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    if (!errors.email && data?.email.includes("@")) {
+    if (!errors.email && data?.email.includes("@") && !data?.address) {
       actions.register();
     } else {
       toast({
@@ -150,6 +128,12 @@ function BetaRegister() {
                     width: "100%",
                     marginBottom: "10px",
                   }}
+                />
+                <input
+                  placeholder="Enter your address"
+                  {...register("address")}
+                  name="address"
+                  hidden
                 />
                 <Button
                   type="submit"
