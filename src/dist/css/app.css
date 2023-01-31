@@ -42,18 +42,27 @@ body {
   overflow-y: auto;
 }
 
-.tertiary-btn:hover {
-  background-color: #d6d6d6;
-}
-
-.secondary-btn {
+button.secondary-btn {
   color: black !important;
+  background: #ffbd12;
+}
+button.secondary-btn:hover {
+  background: linear-gradient(-45deg, #ff89bb, #ffd467, #ffbd12, #ff89bb);
+  background-size: 400% 400%;
+  -webkit-animation: gradientBG 10s ease infinite;
+  animation: gradientBG 10s ease infinite;
 }
 
-.secondary-btn:hover {
-  background-color: #ffd467 !important;
+button.primary-btn:hover {
+  background: linear-gradient(-45deg, #ff89bb, #5477f7, #2d5cff, #ff89bb);
+  background-size: 400% 400%;
+  -webkit-animation: gradientBG 10s ease infinite;
+  animation: gradientBG 10s ease infinite;
 }
 
-.primary-btn:hover {
-  background-color: #2d5cff;
+button.tertiary-btn:hover {
+  background: linear-gradient(-45deg, #fbb3d1, #fcfcfc, #ffffff, #ffa8cc);
+  background-size: 400% 400%;
+  -webkit-animation: gradientBG 10s ease infinite;
+  animation: gradientBG 10s ease infinite;
 }
