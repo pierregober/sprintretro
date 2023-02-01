@@ -467,6 +467,7 @@ function Cookies() {
                 data-custom-class="link"
                 href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html"
                 target="_BLANK"
+                rel="noreferrer"
               >
                 <span style={{ fontSize: "15px" }}>
                   Website Storage Settings Panel
@@ -481,6 +482,7 @@ function Cookies() {
                 data-custom-class="link"
                 href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager03.html"
                 target="_BLANK"
+                rel="noreferrer"
               >
                 <span style={{ fontSize: "15px" }}>
                   Global Storage Settings Panel

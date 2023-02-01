@@ -1,17 +1,5 @@
 /** Vendor **/
-import {
-  Box,
-  Container,
-  Divider,
-  Heading,
-  Stack,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
-import { products } from "../cards/pricingData";
-import ProductCallToActionTable from "../cards/ProductCallToActionTable";
-import ProductFeaturesTable from "../cards/ProductFeaturesTable";
-import ProductOverviewTable from "../cards/ProductOverviewTable";
+import { Box, Container, Heading, Stack, Text } from "@chakra-ui/react";
 import { Button } from "@contra-ui/core";
 
 /** Custom Components **/
@@ -19,9 +7,7 @@ import { Button } from "@contra-ui/core";
 /** Custom CSS **/
 import "../pricing.css";
 
-function Pricing() {
-  const isMobile = useBreakpointValue({ base: true, md: false });
-
+function Heroes() {
   return (
     <Box as="section" bg="bg-surface" py={{ base: "16", md: "24" }}>
       <Container>
@@ -51,4 +37,4 @@ function Pricing() {
     </Box>
   );
 }
-export default Pricing;
+export default Heroes;

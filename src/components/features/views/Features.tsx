@@ -1,14 +1,5 @@
 /** Vendors **/
-import {
-  Box,
-  Button,
-  Container,
-  Heading,
-  Image,
-  Square,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Container, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import { IconButton } from "@contra-ui/core";
 
 /** Icons **/

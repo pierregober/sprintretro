@@ -84,6 +84,7 @@ function PrivacyPolicy() {
                     <a
                       href="https://www.afteraction.ai"
                       target="_blank"
+                      rel="noreferrer"
                       data-custom-class="link"
                     >
                       https://www.afteraction.ai
@@ -1239,6 +1240,7 @@ function PrivacyPolicy() {
                         <a
                           href="https://stripe.com/privacy"
                           target="_blank"
+                          rel="noreferrer"
                           data-custom-class="link"
                         >
                           https://stripe.com/privacy
@@ -4624,6 +4626,7 @@ function PrivacyPolicy() {
                                                                   href="https://www.edoeb.admin.ch/edoeb/en/home.html"
                                                                   rel="noopener noreferrer"
                                                                   target="_blank"
+                                                                  rel="noreferrer"
                                                                 >
                                                                   https://www.edoeb.admin.ch/edoeb/en/home.html
                                                                 </a>
@@ -8131,6 +8134,7 @@ function PrivacyPolicy() {
                                                                 <a
                                                                   href="https://www.afteraction.ai/contact"
                                                                   target="_blank"
+                                                                  rel="noreferrer"
                                                                   data-custom-class="link"
                                                                 >
                                                                   https://www.afteraction.ai/contact
@@ -10709,6 +10713,7 @@ function PrivacyPolicy() {
                                                                     <a
                                                                       href="https://www.afteraction.ai/contact"
                                                                       target="_blank"
+                                                                      rel="noreferrer"
                                                                       data-custom-class="link"
                                                                     >
                                                                       https://www.afteraction.ai/contact
@@ -11832,6 +11837,7 @@ function PrivacyPolicy() {
                                                         href="https://www.oag.state.va.us/consumer-protection/index.php/file-a-complaint"
                                                         rel="noopener noreferrer"
                                                         target="_blank"
+                                                        rel="noreferrer"
                                                       >
                                                         <span
                                                           style={{
