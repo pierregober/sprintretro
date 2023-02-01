@@ -11,7 +11,6 @@ import { products } from "../cards/pricingData";
 import ProductCallToActionTable from "../cards/ProductCallToActionTable";
 import ProductFeaturesTable from "../cards/ProductFeaturesTable";
 import ProductOverviewTable from "../cards/ProductOverviewTable";
-import { Button } from "@contra-ui/core";
 
 /** Custom Components **/
 
