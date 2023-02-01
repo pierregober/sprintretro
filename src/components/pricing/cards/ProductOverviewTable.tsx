@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
-
 /** Vendor **/
 import { Button } from "@contra-ui/core";
 import {
-  Badge,
   Heading,
   HStack,
   Stack,

@@ -116,6 +116,7 @@ function BetaRegister() {
                     : "flex-column"
                 }
                 data-netlify={true}
+                data-netlify-recaptcha={true}
                 name="preregister"
                 onSubmit={handleSubmit(onSubmit)}
               >
@@ -153,6 +154,7 @@ function BetaRegister() {
                 >
                   Subscribe
                 </Button>
+                <div data-netlify-recaptcha={true}></div>
               </form>
             </Box>
           </Stack>
