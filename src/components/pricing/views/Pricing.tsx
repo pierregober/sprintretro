@@ -2,7 +2,6 @@
 import {
   Box,
   Container,
-  Divider,
   Heading,
   Stack,
   Text,
@@ -37,8 +36,9 @@ function Pricing() {
               </Heading>
             </Stack>
             <Text fontSize={{ base: "lg", md: "xl" }} color="muted" maxW="3xl">
-              Upgrade, downgrade or cancel at any time <br />
-              Monthly and annual subscriptions available
+              <s>Upgrade, downgrade or cancel at any time</s> <br />
+              <s> Monthly and annual subscriptions available</s> <br />
+              Currently only offering only free memberships
             </Text>
           </Stack>
         </Container>
@@ -72,31 +72,6 @@ function Pricing() {
           </Container>
         )}
       </Stack>
-      <Divider orientation="horizontal" />
-      <Container pt={14}>
-        <Stack
-          spacing={{ base: "4", md: "6" }}
-          textAlign="center"
-          align="center"
-        >
-          <Stack spacing="3">
-            <Heading fontWeight="bold" size={{ base: "md", md: "lg" }}>
-              Heroes Program
-            </Heading>
-          </Stack>
-          <Text fontSize={{ base: "lg", md: "xl" }} color="muted" maxW="3xl">
-            We’re more than just a sprint retro company. We do our part to
-            support those who support, protect, and empower our communities
-            <b> worldwide</b>. <br />
-            <br /> To give thanks, we provide lifetime discounts on all After
-            Action’s products to our community’s heroes from healthcare workers,
-            first responders, fire fighters, active military, veterans, law
-            enforcement, to non-profit organization employees. We’ve got your
-            back!
-          </Text>
-          <Button className="primary-btn">Learn More</Button>
-        </Stack>
-      </Container>
     </Box>
   );
 }

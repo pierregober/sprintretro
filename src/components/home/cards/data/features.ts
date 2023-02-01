@@ -12,7 +12,7 @@ import {
   SPulse,
   NetworkCommunication,
   VirtualAssistant2,
-} from "../icons/NucleoIcons";
+} from "../../../shared/icons/NucleoIcons";
 
 export const more_features = [
   {

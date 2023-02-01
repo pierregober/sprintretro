@@ -1,7 +1,7 @@
 export const products = [
   {
     name: "Freemium",
-    description: "It's free forever, no credit card required ",
+    description: "It's free forever membership, no credit card required",
     price: "$0",
     features: {
       // Features,

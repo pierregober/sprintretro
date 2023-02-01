@@ -68,7 +68,6 @@ function ProductOverviewTable(props: ProductOverviewTableProps) {
     return element;
   }
 
-  console.log(products);
   return (
     <Table sx={{ tableLayout: "fixed" }} {...tableProps}>
       <Thead>

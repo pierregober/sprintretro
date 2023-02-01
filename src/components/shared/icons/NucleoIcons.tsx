@@ -575,3 +575,214 @@ export function Export() {
     </svg>
   );
 }
+
+export function DataTable() {
+  return (
+    <svg
+      height="24"
+      width="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g fill="#F7F7F7" stroke="#F7F7F7">
+        <rect
+          height="8"
+          width="20"
+          fill="none"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          x="2"
+          y="2"
+        />
+        <line
+          fill="none"
+          stroke="#F7F7F7"
+          strokeLinecap="square"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          x1="2"
+          x2="10"
+          y1="14"
+          y2="14"
+        />
+        <line
+          fill="none"
+          stroke="#F7F7F7"
+          strokeLinecap="square"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          x1="14"
+          x2="22"
+          y1="14"
+          y2="14"
+        />
+        <line
+          fill="none"
+          stroke="#F7F7F7"
+          strokeLinecap="square"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          x1="2"
+          x2="10"
+          y1="18"
+          y2="18"
+        />
+        <line
+          fill="none"
+          stroke="#F7F7F7"
+          strokeLinecap="square"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          x1="14"
+          x2="22"
+          y1="18"
+          y2="18"
+        />
+        <line
+          fill="none"
+          stroke="#F7F7F7"
+          strokeLinecap="square"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          x1="2"
+          x2="10"
+          y1="22"
+          y2="22"
+        />
+        <line
+          fill="none"
+          stroke="#F7F7F7"
+          strokeLinecap="square"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          x1="14"
+          x2="22"
+          y1="22"
+          y2="22"
+        />
+        <line
+          fill="none"
+          stroke="#F7F7F7"
+          strokeLinecap="square"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          x1="6"
+          x2="10"
+          y1="6"
+          y2="6"
+        />
+        <line
+          fill="none"
+          stroke="#F7F7F7"
+          strokeLinecap="square"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          x1="14"
+          x2="18"
+          y1="6"
+          y2="6"
+        />
+      </g>
+    </svg>
+  );
+}
+export function MultiplePeople() {
+  return (
+    <svg
+      height="24"
+      width="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g fill="#F7F7F7" stroke="#F7F7F7">
+        <path
+          d="M4,7L4,7 C2.895,7,2,6.105,2,5v0c0-1.105,0.895-2,2-2h0c1.105,0,2,0.895,2,2v0C6,6.105,5.105,7,4,7z"
+          fill="none"
+          strokeLinecap="square"
+          strokeLinejoin="miter"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+        />
+        <path
+          d="M6,21H3v-4 l-2,0v-5c0-1.105,0.895-2,2-2h1"
+          fill="none"
+          strokeLinecap="square"
+          strokeLinejoin="miter"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+        />
+        <path
+          d="M20,7L20,7 c1.105,0,2-0.895,2-2v0c0-1.105-0.895-2-2-2h0c-1.105,0-2,0.895-2,2v0C18,6.105,18.895,7,20,7z"
+          fill="none"
+          strokeLinecap="square"
+          strokeLinejoin="miter"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+        />
+        <path
+          d="M18,21h3v-4 l2,0v-5c0-1.105-0.895-2-2-2h-1"
+          fill="none"
+          strokeLinecap="square"
+          strokeLinejoin="miter"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+        />
+        <path
+          d="M12,7L12,7 c-1.657,0-3-1.343-3-3v0c0-1.657,1.343-3,3-3h0c1.657,0,3,1.343,3,3v0C15,5.657,13.657,7,12,7z"
+          fill="none"
+          stroke="#F7F7F7"
+          strokeLinecap="square"
+          strokeLinejoin="miter"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+        />
+        <path
+          d="M15,23H9v-6H7v-5 c0-1.105,0.895-2,2-2h6c1.105,0,2,0.895,2,2v6h-2V23z"
+          fill="none"
+          stroke="#F7F7F7"
+          strokeLinecap="square"
+          strokeLinejoin="miter"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+        />
+      </g>
+    </svg>
+  );
+}
+
+export function CheckAll() {
+  return (
+    <svg
+      height="24"
+      width="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g fill="#F7F7F7">
+        <path d="M4.549,19.107.171,14,2,12l3.834,3.006L17,3l2,1L7.664,19.011A2,2,0,0,1,4.549,19.107Z" />
+        <rect height="2" width="5" fill="#F7F7F7" x="19" y="7" />
+        <rect height="2" width="9" fill="#F7F7F7" x="15" y="12" />
+        <rect height="2" width="12" fill="#F7F7F7" x="12" y="17" />
+      </g>
+    </svg>
+  );
+}
+
+export function DirectionRight() {
+  return (
+    <svg
+      height="24"
+      width="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g fill="#F7F7F7">
+        <path d="M1,8C0.4,8,0,8.4,0,9v6c0,0.6,0.4,1,1,1s1-0.4,1-1V9C2,8.4,1.6,8,1,8z" />
+        <path
+          d="M23.6,12L11,1.9V8H5C4.4,8,4,8.4,4,9v6c0,0.6,0.4,1,1,1h6v6.1L23.6,12z"
+          fill="#F7F7F7"
+        />
+      </g>
+    </svg>
+  );
+}

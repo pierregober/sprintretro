@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 
 /** Vendor **/
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -11,12 +11,12 @@ import About from "./components/about/views/About";
 import AppLayout from "./components/shared/layout/AppLayout";
 import Checkout from "./components/checkout/views/Checkout";
 import Features from "./components/features/views/Features";
+import Heroes from "./components/pricing/views/Heroes";
 import Home from "./components/home/views/Home";
+import Legal from "./components/legal/views/Legal";
 import FAQ from "./components/faq/views/FAQ";
 import Pricing from "./components/pricing/views/Pricing";
 import NotFound from "./components/error/views/NotFound";
-import Legal from "./components/legal/views/Legal";
-import Heroes from "./components/pricing/views/Heroes";
 
 /** Types **/
 import type { ReactElement } from "react";
