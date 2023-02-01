@@ -23,6 +23,7 @@ export const links = [
       { label: "Careers", href: "#" },
       { label: "Press", href: "#" },
       { label: "FAQs", href: "#" },
+      { label: "Heroes Program", href: "/heroes" },
     ],
   },
   {

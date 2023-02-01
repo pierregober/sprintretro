@@ -16,6 +16,7 @@ import FAQ from "./components/faq/views/FAQ";
 import Pricing from "./components/pricing/views/Pricing";
 import NotFound from "./components/error/views/NotFound";
 import Legal from "./components/legal/views/Legal";
+import Heroes from "./components/pricing/views/Heroes";
 
 /** Types **/
 import type { ReactElement } from "react";
@@ -27,7 +28,9 @@ import "./dist/css/font.css";
 import "./dist/css/spacing.css";
 
 /** Routes **/
-// const FacilityRoutes = lazy(() => import("./routes/Facility"));
+// const CompanyRoutes = lazy(() => import("./routes/Company"));
+// const ProductRoutes = lazy(() => import("./routes/Product"));
+// const ResourceRoutes = lazy(() => import("./routes/Resources"));
 
 /** Theme **/
 import { colors } from "./dist/js/theme/colors";
@@ -60,6 +63,7 @@ function App(): ReactElement {
                 <Route path="faq" element={<FAQ />} />
                 <Route path="features" element={<Features />} />
                 <Route path="pricing" element={<Pricing />} />
+                <Route path="heroes" element={<Heroes />} />
                 <Route path="legal" element={<Legal />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
