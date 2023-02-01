@@ -53,6 +53,7 @@ function Cookies() {
                     href="https://www.afteraction.ai"
                     target="_blank"
                     data-custom-class="link"
+                    rel="noreferrer"
                   >
                     https://www.afteraction.ai
                   </a>

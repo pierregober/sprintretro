@@ -4626,7 +4626,6 @@ function PrivacyPolicy() {
                                                                   href="https://www.edoeb.admin.ch/edoeb/en/home.html"
                                                                   rel="noopener noreferrer"
                                                                   target="_blank"
-                                                                  rel="noreferrer"
                                                                 >
                                                                   https://www.edoeb.admin.ch/edoeb/en/home.html
                                                                 </a>
@@ -11837,7 +11836,6 @@ function PrivacyPolicy() {
                                                         href="https://www.oag.state.va.us/consumer-protection/index.php/file-a-complaint"
                                                         rel="noopener noreferrer"
                                                         target="_blank"
-                                                        rel="noreferrer"
                                                       >
                                                         <span
                                                           style={{
