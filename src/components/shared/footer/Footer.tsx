@@ -29,10 +29,9 @@ export const links = [
     title: "Product",
     links: [
       { label: "How it works", href: "#" },
-      { label: "Pricing", href: "#" },
+      { label: "Pricing", href: "/pricing" },
       { label: "Use Cases", href: "#" },
       { label: "Integrations", href: "#" },
-      { label: "SAML SSO", href: "#" },
     ],
   },
   {
@@ -47,10 +46,9 @@ export const links = [
   {
     title: "Legal",
     links: [
-      { label: "Terms of Service", href: "#" },
-      { label: "Privacy Policy", href: "#" },
-      { label: "Offer terms", href: "#" },
-      { label: "License", href: "#" },
+      { label: "Terms", href: "/legal" },
+      { label: "Privacy", href: "/legal" },
+      { label: "Cookies", href: "/legal" },
     ],
   },
 ];
