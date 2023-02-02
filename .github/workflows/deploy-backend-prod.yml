@@ -1,0 +1,65 @@
+name: Deploy To Production
+
+on:
+  workflow_dispatch:
+
+env:
+  STAGE: prod
+
+jobs:
+  deploy:
+    name: Serverless - Deploy
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write
+
+    strategy:
+      matrix:
+        directory: [infra, auth]
+
+    defaults:
+      run:
+        working-directory: "./backend"
+
+    steps:
+      - name: Checkout - Branch
+        uses: actions/checkout@v3
+
+      - name: Echo - Branch Name
+        run: echo ${{ github.ref }}
+
+      - name: Configure - AWS Creds
+        id: config-aws-creds
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AWS_OIDC_PROVIDER_ARN }}
+          aws-region: us-west-2
+
+      - name: NodeJS - Runtime 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.17.3"
+
+      - name: Serverless - Global Install
+        run: npm install -g serverless
+
+      - name: Serverless - Config Auth
+        run: |
+          sls config credentials --provider aws --key ${{ env.AWS_ACCESS_KEY_ID }} --secret ${{ env.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Install - Deps
+        run: |
+          cd ./${{ matrix.directory }}
+          npm install
+
+      - name: Serverless - Deploy
+        run: |
+          cd ./${{ matrix.directory }}
+          sls deploy --stage ${{ env.STAGE }} --verbose
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_SECRET_TOKEN }}
