@@ -55,7 +55,7 @@ function BetaRegister() {
         body: encode({
           "form-name": "preregister",
           email: watch("email"),
-          address: "",
+          address: "honeypot-success",
         }).toString(),
       })
         .then(() =>
