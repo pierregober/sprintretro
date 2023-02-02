@@ -76,5 +76,5 @@ button.tertiary-btn:hover {
 }
 
 .address-field {
-  visibility: none;
+  visibility: hidden;
 }

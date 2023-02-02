@@ -55,7 +55,7 @@ function BetaRegister() {
         body: encode({
           "form-name": "preregister",
           email: watch("email"),
-          address: "honeypot-success",
+          address: "",
         }).toString(),
       })
         .then(() =>
@@ -116,11 +116,8 @@ function BetaRegister() {
                     ? ""
                     : "flex-column"
                 }
-                data-netlify={true}
-                data-netlify-recaptcha={true}
                 onSubmit={handleSubmit(onSubmit)}
               >
-                <input type="hidden" name="form-name" value="preregister" />
                 <input
                   placeholder="Enter your email"
                   {...register("email")}
