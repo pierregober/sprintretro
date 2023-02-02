@@ -1,22 +1,10 @@
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 
 /** Vendor **/
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Provider as ContraProvider } from "@contra-ui/core";
 import { theme } from "@chakra-ui/pro-theme";
-
-/** Custom Components **/
-import About from "./components/about/views/About";
-import AppLayout from "./components/shared/layout/AppLayout";
-import Checkout from "./components/checkout/views/Checkout";
-import Features from "./components/features/views/Features";
-import Heroes from "./components/pricing/views/Heroes";
-import Home from "./components/home/views/Home";
-import Legal from "./components/legal/views/Legal";
-import FAQ from "./components/faq/views/FAQ";
-import Pricing from "./components/pricing/views/Pricing";
-import NotFound from "./components/error/views/NotFound";
 
 /** Types **/
 import type { ReactElement } from "react";
@@ -27,13 +15,20 @@ import "./dist/css/format.css";
 import "./dist/css/font.css";
 import "./dist/css/spacing.css";
 
-/** Routes **/
-// const CompanyRoutes = lazy(() => import("./routes/Company"));
-// const ProductRoutes = lazy(() => import("./routes/Product"));
-// const ResourceRoutes = lazy(() => import("./routes/Resources"));
-
 /** Theme **/
 import { colors } from "./dist/js/theme/colors";
+
+/** Custom Components **/
+const About = lazy(() => import("./components/about/views/About"));
+const AppLayout = lazy(() => import("./components/shared/layout/AppLayout"));
+const Checkout = lazy(() => import("./components/checkout/views/Checkout"));
+const Features = lazy(() => import("./components/features/views/Features"));
+const Heroes = lazy(() => import("./components/pricing/views/Heroes"));
+const Home = lazy(() => import("./components/home/views/Home"));
+const Legal = lazy(() => import("./components/legal/views/Legal"));
+const FAQ = lazy(() => import("./components/faq/views/FAQ"));
+const Pricing = lazy(() => import("./components/pricing/views/Pricing"));
+const NotFound = lazy(() => import("./components/error/views/NotFound"));
 
 function App(): ReactElement {
   const myTheme = extendTheme(
