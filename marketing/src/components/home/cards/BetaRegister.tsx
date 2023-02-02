@@ -55,6 +55,7 @@ function BetaRegister() {
         body: encode({
           "form-name": "preregister",
           email: watch("email"),
+          address: "",
         }).toString(),
       })
         .then(() =>
