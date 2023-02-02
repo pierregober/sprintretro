@@ -117,11 +117,10 @@ function BetaRegister() {
                     : "flex-column"
                 }
                 data-netlify={true}
-                netlify-honeypot="address"
                 data-netlify-recaptcha={true}
-                name="preregister"
                 onSubmit={handleSubmit(onSubmit)}
               >
+                <input type="hidden" name="form-name" value="preregister" />
                 <input
                   placeholder="Enter your email"
                   {...register("email")}
@@ -142,7 +141,7 @@ function BetaRegister() {
                   placeholder="Enter your address"
                   {...register("address")}
                   name="address"
-                  hidden
+                  className="address-field"
                 />
                 <Button
                   className="primary-btn"
