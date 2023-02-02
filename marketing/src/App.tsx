@@ -44,7 +44,6 @@ function App(): ReactElement {
     theme,
   );
 
-  //TODO - Remember to replace suspense with a loading component
   return (
     <Suspense
       fallback={

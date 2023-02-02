@@ -1,8 +1,5 @@
 import React from "react";
 
-/** Custom Components */
-//TODO: Create a loading component for the app
-
 /** Custom Hooks **/
 import useMaintenance from "../../../dist/js/hooks/useMaintenance";
 
