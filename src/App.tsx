@@ -2,7 +2,7 @@ import { Suspense, lazy } from "react";
 
 /** Vendor **/
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { Box, ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Provider as ContraProvider } from "@contra-ui/core";
 import { theme } from "@chakra-ui/pro-theme";
 
@@ -46,7 +46,19 @@ function App(): ReactElement {
 
   //TODO - Remember to replace suspense with a loading component
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense
+      fallback={
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          height="100vh"
+          fontSize={30}
+        >
+          Loading...
+        </Box>
+      }
+    >
       <ChakraProvider theme={myTheme}>
         <ContraProvider>
           <BrowserRouter>
