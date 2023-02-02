@@ -151,7 +151,6 @@ function BetaRegister() {
                 >
                   Subscribe
                 </Button>
-                <div data-netlify-recaptcha={true}></div>
               </form>
             </Box>
           </Stack>
