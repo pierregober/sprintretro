@@ -117,6 +117,7 @@ function BetaRegister() {
                     : "flex-column"
                 }
                 data-netlify={true}
+                netlify-honeypot="address"
                 data-netlify-recaptcha={true}
                 name="preregister"
                 onSubmit={handleSubmit(onSubmit)}
