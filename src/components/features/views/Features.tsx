@@ -2,12 +2,21 @@
 import { Box, Container, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import { IconButton } from "@contra-ui/core";
 
+/** Custom Components **/
+import { Features as ExtraFeatures } from "../../home/cards/Features";
+
 /** Icons **/
 import {
   CheckAll,
   DataTable,
   MultiplePeople,
 } from "../../shared/icons/NucleoIcons";
+
+/** Data **/
+import {
+  features as initFeatures,
+  more_features as moreFeatures,
+} from "../../home/cards/data/features";
 
 export const features = [
   {
@@ -79,14 +88,6 @@ function Features() {
                       </Text>
                       <Text color="muted">{feature.description}</Text>
                     </Stack>
-                    {/* <Button
-                      variant="link"
-                      colorScheme="blue"
-                      rightIcon={<DirectionRight />}
-                      alignSelf="start"
-                    >
-                      Read more
-                    </Button> */}
                   </Stack>
                 </Stack>
               ))}
@@ -94,14 +95,17 @@ function Features() {
             <Box width="full" overflow="hidden">
               <Image
                 maxW="100%"
-                minH={{ base: "100%", lg: "560px" }}
+                minH={{ base: "100%", md: "350px", lg: "500px" }}
                 objectFit="cover"
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                src="https://i.imgur.com/C3BMOTC.png"
                 alt="Developer"
               />
             </Box>
           </Stack>
         </Stack>
+        <Box style={{ zIndex: "10", position: "relative" }}>
+          <ExtraFeatures features={initFeatures} moreFeatures={moreFeatures} />
+        </Box>
       </Container>
     </Box>
   );

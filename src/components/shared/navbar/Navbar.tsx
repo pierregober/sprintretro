@@ -35,7 +35,7 @@ const navigationSet: INavigationSet = [
   { title: "Features", path: "/features" },
   { title: "Pricing", path: "/pricing" },
   { title: "About", path: "/about" },
-  { title: "FAQs", path: "/faqs" },
+  // { title: "FAQs", path: "/faqs" },
 ];
 
 function NavbarDesktop(): React.ReactElement {

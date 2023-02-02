@@ -5,7 +5,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 /** Custom Components**/
 import RegisterButton from "../../auth/cards/RegisterButton";
-import Features from "../cards/Features";
+import { Features } from "../cards/Features";
 // import CompanyGallery from "../cards/CompanyGallery";
 import BetaRegister from "../cards/BetaRegister";
 import HowSection from "../cards/HowSection";
@@ -16,6 +16,9 @@ import PersonRight from "../../../dist/img/PersonRight";
 
 /** CSS **/
 import "./home.css";
+
+/** Data **/
+import { features } from "../cards/data/features";
 
 function Home() {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
@@ -80,7 +83,7 @@ function Home() {
         </Box>
       </Box>
       <Box bg="#F7FAFC" style={{ zIndex: "10", position: "relative" }}>
-        <Features />
+        <Features bg="#F7FAFC" features={features} />
         <Box className="flex flex-column-center flex-center" py={1}>
           <Link className="link-no-decoration" as={RouterLink} to={"/features"}>
             <Button className="primary-btn">View All Features</Button>
