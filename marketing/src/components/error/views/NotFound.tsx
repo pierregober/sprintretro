@@ -4,6 +4,6 @@
 /** Custom Components **/
 
 function NotFound() {
-  return <></>;
+  return <>Nothing to see here...</>;
 }
 export default NotFound;
