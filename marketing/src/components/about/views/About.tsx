@@ -71,13 +71,12 @@ function About() {
             className="flex flex-center"
           >
             <Text fontSize={{ base: "lg", md: "xl" }} color="muted" maxW="3xl">
-              I, Pierre, am a solo team member with a mission to create a fun
-              and interactive sprint retrospective application. Recognizing the
-              absence of a definitive solution in the market, I am driven to
-              create a user-friendly application with the added benefit of
-              Artificial Intelligence. My goal is to provide the most intuitive
-              and effortless sprint retrospective experience. Welcome to the
-              app!
+              We are on a mission to create a fun and interactive sprint
+              retrospective application. Recognizing the absence of a definitive
+              solution in the market, I am driven to create a user-friendly
+              application with the added benefit of Artificial Intelligence. My
+              goal is to provide the most intuitive and effortless sprint
+              retrospective experience. Welcome to the app!
             </Text>
           </Stack>
         </Container>

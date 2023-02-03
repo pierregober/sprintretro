@@ -84,7 +84,7 @@ function NavbarDesktop(): React.ReactElement {
 function NavbarMobile(): React.ReactElement {
   const { isOpen, onClose, onToggle } = useDisclosure();
   return (
-    <Box className="navbar" as="nav">
+    <Box className="flex flex-center navbar" as="nav">
       <Container className="navbar-content-container">
         <Box className="flex-between">
           <Box className="flex-center flex-row gap-spacer-5">

@@ -1,5 +1,30 @@
 /** Vendor **/
-import { Flex, useColorModeValue } from "@chakra-ui/react";
+import {
+  // Box,
+  // Button,
+  // Divider,
+  Flex,
+  // HStack,
+  // Progress,
+  Stack,
+  // Text,
+} from "@chakra-ui/react";
+import {
+  FiBarChart2,
+  FiBookmark,
+  FiCheckSquare,
+  // FiHelpCircle,
+  FiHome,
+  // FiSettings,
+  FiUsers,
+} from "react-icons/fi";
+
+/** Custom Components **/
+import { NavButton } from "./cards/NavButton";
+// import { UserProfile } from "./cards/UserProfile";
+
+/** Images **/
+import Logo from "../../../dist/img/Logo";
 
 function Sidebar(): React.ReactElement {
   return (
@@ -7,13 +32,63 @@ function Sidebar(): React.ReactElement {
       <Flex
         flex="1"
         bg="bg-surface"
-        overflowY="auto"
-        boxShadow={useColorModeValue("sm", "sm-dark")}
+        boxShadow="sm"
         maxW={{ base: "full", sm: "xs" }}
         py={{ base: "6", sm: "8" }}
         px={{ base: "4", sm: "6" }}
       >
-        hey there put stuff here
+        <Stack justify="space-between" spacing="1">
+          <Stack spacing={{ base: "5", sm: "6" }} shouldWrapChildren>
+            <Logo />
+            <Stack spacing="1">
+              <NavButton label="Home" icon={FiHome} link="/" />
+              <NavButton
+                label="Features"
+                icon={FiCheckSquare}
+                link="/features"
+              />
+              <NavButton label="Pricing" icon={FiBookmark} link="/pricing" />
+              <NavButton label="About" icon={FiUsers} link="/about" />
+            </Stack>
+          </Stack>
+          <Stack spacing={{ base: "5", sm: "6" }}>
+            {/* <Stack spacing="1">
+              <NavButton label="Help" icon={FiHelpCircle} />
+              <NavButton label="Settings" icon={FiSettings} />
+            </Stack> */}
+            {/* <Box bg="bg-subtle" px="4" py="5" borderRadius="lg">
+              <Stack spacing="4">
+                <Stack spacing="1">
+                  <Text fontSize="sm" fontWeight="medium">
+                    Almost there
+                  </Text>
+                  <Text fontSize="sm" color="muted">
+                    Fill in some more information about you and your person.
+                  </Text>
+                </Stack>
+                <Progress
+                  value={80}
+                  size="sm"
+                  aria-label="Profile Update Progress"
+                />
+                <HStack spacing="3">
+                  <Button variant="link" size="sm">
+                    Dismiss
+                  </Button>
+                  <Button variant="link" size="sm" colorScheme="blue">
+                    Update profile
+                  </Button>
+                </HStack>
+              </Stack>
+            </Box>
+            <Divider />
+            <UserProfile
+              name="Christoph Winston"
+              image="https://tinyurl.com/yhkm2ek8"
+              email="chris@chakra-ui.com"
+            /> */}
+          </Stack>
+        </Stack>
       </Flex>
     </Flex>
   );
