@@ -10,7 +10,6 @@ import {
   // Text,
 } from "@chakra-ui/react";
 import {
-  FiBarChart2,
   FiBookmark,
   FiCheckSquare,
   // FiHelpCircle,
